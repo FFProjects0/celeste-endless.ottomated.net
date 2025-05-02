@@ -22,7 +22,7 @@ class ClickableLabel(QLabel):
 class MapBox(QWidget):
     def __init__(self):
         super().__init__()
-        with open("style.qss", "r") as f:
+        with open(resource_path("style.qss"), "r") as f:
             self.setStyleSheet(f.read())
         self.current_image_path = ""  # store path for double-click usage
 
